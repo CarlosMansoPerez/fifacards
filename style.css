@@ -1,0 +1,50 @@
+.bg-gold{
+    background: rgb(254,242,162);
+    background: linear-gradient(142deg, rgba(254,242,162,1) 0%, rgba(224,203,118,1) 100%);
+}
+.bg-footer{
+    background-image: url("./img/Rectangle\ 14.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.forma{
+    border-radius: 40px;
+}
+.bolder{
+    font-weight: 500;
+}
+.bolder-xl{
+    font-weight: 700;
+}
+.bg-gold-card{
+    background-image: url("./img/Group\ 43.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

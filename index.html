@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+
+    <title>Document</title>
+</head>
+<body class="flex flex-col justify-center items-center">
+
+    <div>
+
+        <form id="playerForm">
+            <label for="image">Imagen del Jugador:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            
+            <label for="rating">Media Global:</label>
+            <input type="number" id="rating" name="rating" required>
+            
+            <label for="position">Posición:</label>
+            <input type="text" id="position" name="position" required>
+            
+            <label for="nationality">Nacionalidad:</label>
+            <select id="nationality" name="nationality" required>
+                <option value="argentina.jpg">Argentina</option>
+                <option value="brasil.jpg">Brasil</option>
+                <option value="alemania.jpg">Alemania</option>
+                <option value="espana.avif">España</option>
+                <option value="francia.avif">Francia</option>
+                <option value="inglaterra.avif">Inglaterra</option>
+                <option value="italia.jpg">Italia</option>
+                <option value="usa.jpg">USA</option>
+            </select>
+            
+            <label for="team">Equipo:</label>
+            <select id="team" name="team" required>
+                <option value="atletico.png">Atlético de Madrid</option>
+                <option value="barcelona.png">FC Barcelona</option>
+                <option value="betis.png">Real Betis</option>
+                <option value="city.png">Man. City</option>
+                <option value="madrid.png">Real Madrid</option>
+                <option value="sevilla.png">Sevilla FC</option>
+                <option value="united.png">Man. United</option>
+            </select>
+
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="pace">Ritmo:</label>
+            <input type="number" id="pace" name="pace" required>
+            
+            <label for="shooting">Tiro:</label>
+            <input type="number" id="shooting" name="shooting" required>
+            
+            <label for="passing">Pase:</label>
+            <input type="number" id="passing" name="passing" required>
+            
+            <label for="dribbling">Regate:</label>
+            <input type="number" id="dribbling" name="dribbling" required>
+            
+            <label for="defense">Defensa:</label>
+            <input type="number" id="defense" name="defense" required>
+            
+            <label for="physical">Físico:</label>
+            <input type="number" id="physical" name="physical" required>
+            
+            <button type="submit" class="mt-10 bg-black text-white uppercase py-2">Crear Carta</button>
+        </form>
+    </div>
+
+
+    <div id="carta" style="display: none;" class="md:w-[500px] h-[700px] forma m-auto flex flex-col justify-start items-center mt-20">
+
+        <div class="w-full h-[350px] flex flex-row justify-start items-center pt-12 bg-gold-card">
+
+            <div class="w-[30%] h-full flex flex-col justify-start items-center">
+                <div class="w-full flex justify-end pt-8 md:pt-0 md:justify-start items-center ps-12">
+                    <p id="playerRating" class="text-5xl md:text-7xl font-bold pt-3"></p>
+                </div>
+                <div class="w-full flex justify-end md:justify-start items-center ps-12 mt-2">
+                    <p id="playerPosition" class="text-3xl font-bold ps-1 uppercase"></p>
+                </div>
+                <div class="w-full flex justify-end md:justify-start items-center ps-12 mt-3">
+                    <img id="nationalityImage" src="" class="w-[80%] ps-1">
+                </div>
+                <div class="w-full flex justify-end md:justify-start items-center ps-12 mt-1">
+                    <img id="teamImage" src="" class="w-[80%] ps-2">
+                </div>
+            </div>
+
+            <div class="w-[70%] md:w-[70%] h-full flex justify-start me-12">
+                <img id="playerImage" src="" class="h-full ">
+            </div>
+
+        </div>
+
+
+        <div class="w-full flex flex-col justify-start items-center bg-gold">
+            <div class="w-full flex justify-center items-center py-2">
+                <p id="playerName" class="uppercase text-5xl bolder text-yellow-950"></p>
+            </div>
+            <hr class="w-[80%] h-[1px] bg-yellow-950" style="border-top-width: 0px">
+        </div>
+
+        <div class="w-full flex flex-row justify-center items-center h-[200px] bg-gold pb-2">
+
+            <div class="w-[45%] h-full flex flex-col justify-between items-center pt-3" >
+                <div class="flex flex-row gap-2">
+                    <span id="playerPace" class="text-4xl bolder-xl text-yellow-950"></span>
+                    <span class="text-4xl bolder text-yellow-950 w-[50px]">RIT</span>
+                </div>
+                <div class="flex flex-row gap-2">
+                    <span id="playerShooting" class="text-4xl bolder-xl text-yellow-950"></span>
+                    <span class="text-4xl bolder text-yellow-950 w-[50px]">TIR</span>
+                </div>
+                <div class="flex flex-row gap-2">
+                    <span id="playerPassing" class="text-4xl bolder-xl text-yellow-950"></span>
+                    <span class="text-4xl bolder text-yellow-950 w-[50px]">PAS</span>
+                </div>
+            </div>
+
+            <div class="w-[45%] h-full flex flex-col justify-between items-center pe-6 pt-3" style="border-left: 2px solid black;">
+                <div class="flex flex-row gap-2">
+                    <span id="playerDribbling" class="text-4xl bolder-xl text-yellow-950"></span>
+                    <span class="text-4xl bolder text-yellow-950 w-[50px]">REG</span>
+                </div>
+                <div class="flex flex-row gap-2">
+                    <span id="playerDefense" class="text-4xl bolder-xl text-yellow-950"></span>
+                    <span class="text-4xl bolder text-yellow-950 w-[50px]">DEF</span>
+                </div>
+                <div class="flex flex-row gap-2">
+                    <span id="playerPhysical" class="text-4xl bolder-xl text-yellow-950"></span>
+                    <span class="text-4xl bolder text-yellow-950 w-[50px]">FIS</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bg-footer w-full h-auto flex flex-col justify-center items-center pb-32">
+            <hr class="w-[10%] h-[1px] bg-yellow-950" style="border-top-width: 0px">
+
+            <div class="w-[100%] h-[60px] m-auto mt-6">
+                <img class=" h-full m-auto" src="./img/logo_CM.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
