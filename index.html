@@ -9,25 +9,25 @@
 
     <title>Document</title>
 </head>
-<body class="flex flex-col justify-center items-center">
+<body class="flex flex-col justify-center items-center" style="background-image: url('./img/campo.jpg'); background-size: cover; background-repeat: no-repeat;">
 
-    <div class="mt-12">
-        <p>Creado por <a class="text-red-500 font-bold pt-12 text-xl" href="https://carlosmanso.es">Carlos Manso</a></p>
+    <div class="mt-12 w-full text-white text-center">
+        <p>Creado por <a class="underline font-bold pt-12 text-xl" href="https://carlosmanso.es">Carlos Manso</a></p>
     </div>
 
-    <div class="mt-12">
+    <div class="mt-12 pb-20">
 
         <form id="playerForm">
-            <label for="image">Imagen del Jugador:</label>
+            <label class="text-white text-lg" for="image">Imagen del Jugador:</label>
             <input type="file" id="image" name="image" accept="image/*" required>
             
-            <label for="rating">Media Global:</label>
+            <label class="text-white text-lg" for="rating">Media Global:</label>
             <input type="number" id="rating" name="rating" required>
             
-            <label for="position">Posición:</label>
+            <label class="text-white text-lg" for="position">Posición:</label>
             <input type="text" id="position" name="position" required>
             
-            <label for="nationality">Nacionalidad:</label>
+            <label class="text-white text-lg" for="nationality">Nacionalidad:</label>
             <select id="nationality" name="nationality" required>
                 <option value="argentina.jpg">Argentina</option>
                 <option value="brasil.jpg">Brasil</option>
@@ -39,7 +39,7 @@
                 <option value="usa.jpg">USA</option>
             </select>
             
-            <label for="team">Equipo:</label>
+            <label class="text-white text-lg" for="team">Equipo:</label>
             <select id="team" name="team" required>
                 <option value="atletico.png">Atlético de Madrid</option>
                 <option value="barcelona.png">FC Barcelona</option>
@@ -50,28 +50,28 @@
                 <option value="united.png">Man. United</option>
             </select>
 
-            <label for="name">Nombre:</label>
+            <label class="text-white text-lg" for="name">Nombre:</label>
             <input type="text" id="name" name="name" required>
             
-            <label for="pace">Ritmo:</label>
+            <label class="text-white text-lg" for="pace">Ritmo:</label>
             <input type="number" id="pace" name="pace" required>
             
-            <label for="shooting">Tiro:</label>
+            <label class="text-white text-lg" for="shooting">Tiro:</label>
             <input type="number" id="shooting" name="shooting" required>
             
-            <label for="passing">Pase:</label>
+            <label class="text-white text-lg" for="passing">Pase:</label>
             <input type="number" id="passing" name="passing" required>
             
-            <label for="dribbling">Regate:</label>
+            <label class="text-white text-lg" for="dribbling">Regate:</label>
             <input type="number" id="dribbling" name="dribbling" required>
             
-            <label for="defense">Defensa:</label>
+            <label class="text-white text-lg" for="defense">Defensa:</label>
             <input type="number" id="defense" name="defense" required>
             
-            <label for="physical">Físico:</label>
+            <label class="text-white text-lg" for="physical">Físico:</label>
             <input type="number" id="physical" name="physical" required>
             
-            <button type="submit" class="mt-10 bg-black text-white uppercase py-2">Crear Carta</button>
+            <button type="submit" class="mt-10 bg-white text-green-700 font-bold uppercase py-2">Crear Carta</button>
         </form>
     </div>
 
